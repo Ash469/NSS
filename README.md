@@ -2,7 +2,7 @@
 
 A modern, responsive website for the National Service Scheme (NSS) cell of IIT Guwahati, built with React and modern web technologies.
 
-![NSS IIT Guwahati](.assets/logo.png)
+![NSS IIT Guwahati](/public/logo.png)
 
 ## 🚀 Features
 
@@ -100,6 +100,7 @@ nss-iitg/
 ├── package.json
 └── README.md
 ```
+
 
 ## 🔧 Configuration
 
