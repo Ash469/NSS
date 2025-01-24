@@ -2,7 +2,7 @@
 
 A modern, responsive website for the National Service Scheme (NSS) cell of IIT Guwahati, built with React and modern web technologies.
 
-![NSS IIT Guwahati](./public/nss-logo.png)
+![NSS IIT Guwahati](.assets/logo.png)
 
 ## 🚀 Features
 
@@ -59,12 +59,11 @@ A modern, responsive website for the National Service Scheme (NSS) cell of IIT G
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/your-username/nss-iitg.git
-   ```
+   git clone https://github.com/Ash469/NSS.git
 
 2. Navigate to project directory
    ```bash
-   cd nss-iitg
+   cd NSS
    ```
 
 3. Install dependencies
@@ -101,14 +100,6 @@ nss-iitg/
 ├── package.json
 └── README.md
 ```
-
-## 🎨 Color Palette
-
-- Primary: `#4CAF50` (Green)
-- Secondary: `#004080` (Dark Blue)
-- Background: `#f9f9f9`
-- Text: `#333333`
-- Accents: `#ff6b6b`
 
 ## 🔧 Configuration
 
@@ -157,9 +148,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👥 Team
 
-- Project Lead: [Your Name]
-- UI/UX Design: [Designer Name]
-- Development: [Developer Names]
+- Project Lead: Ayush Shandilya
+- UI/UX Design: Ayush Shandilya
+- Development: Ayush Shandilya
 
 ## 📞 Contact
 
