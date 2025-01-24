@@ -1,5 +1,7 @@
 /* Hero Section Container */
 .hero-section {
+  margin: 0;
+  padding: 0;
   position: relative;
   height: 100%;
   width: 100%;
@@ -176,7 +178,7 @@
   z-index: 90;
   display: flex;
   gap: 1.5rem;
-  
+  transition: all 0.3s ease;
 }
 
 .hero-nav button {
@@ -190,6 +192,22 @@
   border-radius: 4px;
   transition: all 0.3s ease;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero-nav button i {
+  font-size: 1.2rem;
+}
+
+.hero-nav.scrolled button {
+  color: #004080;
+}
+
+.hero-nav.scrolled button:hover {
+  background: rgba(0, 64, 128, 0.1);
+  color: #4CAF50;
 }
 
 .hero-nav button:hover {

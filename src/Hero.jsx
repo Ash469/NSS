@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -32,15 +32,25 @@ const heroSlides = [
 
 const Hero = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      const yOffset = -40; // Offset for fixed header if needed
+      const yOffset = -40;
       const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: 'smooth' });
       setIsMenuOpen(false);
@@ -48,7 +58,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="hero-section">
+    <div section id="home" className="hero-section">
       <Swiper
         modules={[Autoplay, EffectFade, Navigation, Pagination]}
         effect="fade"
@@ -87,24 +97,41 @@ const Hero = () => {
         ))}
       </Swiper>
       
-      <div className="nss-logo">
-        <img src={logo} alt="NSS Logo" />
-        <span>NSS, IIT GUWAHATI</span>
+      <div className={`nav-wrapper ${isScrolled ? 'scrolled' : ''}`}>
+        <div className="nss-logo">
+          <img src={logo} alt="NSS Logo" />
+          <span>NSS, IIT GUWAHATI</span>
+        </div>
+
+        <button className="menu-toggle" onClick={toggleMenu}>
+          <span className={`hamburger ${isMenuOpen ? 'active' : ''}`}></span>
+        </button>
+
+        <nav className={`hero-nav ${isMenuOpen ? 'active' : ''} ${isScrolled ? 'scrolled' : ''}`}>
+          <button onClick={() => scrollToSection('home')}>
+            <i className="fas fa-home"></i>
+            <span>HOME</span>
+          </button>
+          <button onClick={() => scrollToSection('objectives')}>
+            <i className="fas fa-bullseye"></i>
+            <span>OBJECTIVES</span>
+          </button>
+          <button onClick={() => scrollToSection('activities')}>
+            <i className="fas fa-tasks"></i>
+            <span>ACTIVITIES</span>
+          </button>
+          <button onClick={() => scrollToSection('team')}>
+            <i className="fas fa-users"></i>
+            <span>OUR TEAM</span>
+          </button>
+          <button onClick={() => scrollToSection('about')}>
+            <i className="fas fa-info-circle"></i>
+            <span>ABOUT</span>
+          </button>
+        </nav>
+
+        {isMenuOpen && <div className="menu-overlay" onClick={toggleMenu}></div>}
       </div>
-
-      <button className="menu-toggle" onClick={toggleMenu}>
-        <span className={`hamburger ${isMenuOpen ? 'active' : ''}`}></span>
-      </button>
-
-      <nav className={`hero-nav ${isMenuOpen ? 'active' : ''}`}>
-        <button onClick={() => scrollToSection('objectives')}>OBJECTIVES</button>
-        <button onClick={() => scrollToSection('activities')}>ACTIVITIES</button>
-        <button onClick={() => scrollToSection('team')}>OUR TEAM</button>
-        <button onClick={() => scrollToSection('about')}>ABOUT</button>
-        <button onClick={() => scrollToSection('contact')}>CONTACT</button>
-      </nav>
-
-      {isMenuOpen && <div className="menu-overlay" onClick={toggleMenu}></div>}
     </div>
   );
 };

@@ -2,6 +2,9 @@ import React from 'react';
 import Hero from './Hero';
 import Objectives from './objective';
 import Activity from './Activity';
+import About from './About';
+import Team from './Team';
+import Footer from './Footer';
 
 const App = () => {
   return (
@@ -9,6 +12,9 @@ const App = () => {
       <Hero />
       <Objectives />
       <Activity />
+      <Team />
+      <About />
+      <Footer />
     </div>
   );
 };
