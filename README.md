@@ -59,7 +59,7 @@ A modern, responsive website for the National Service Scheme (NSS) cell of IIT G
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/your-username/nss-iitg.git
+   https://github.com/Ash469/NSS.git
    ```
 
 2. Navigate to project directory
