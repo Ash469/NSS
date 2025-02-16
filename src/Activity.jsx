@@ -42,48 +42,80 @@ const Pagination = ({ totalItems, itemsPerPage, currentPage, onPageChange }) => 
   const totalPages = Math.ceil(totalItems / itemsPerPage);
   
   const getPageNumbers = () => {
-    if (totalPages <= 3) return Array.from({ length: totalPages }, (_, i) => i + 1);
-  
-    const pages = [1];
+    if (totalPages <= 5) return Array.from({ length: totalPages }, (_, i) => i + 1);
+    
+    let pages = [];
+    
+    // Always show first page
+    pages.push(1);
+    
     if (currentPage <= 3) {
-      pages.push(2, 3, '...');
+      // Near the start
+      pages.push(2, 3, 4, '...', totalPages);
     } else if (currentPage >= totalPages - 2) {
-      pages.push('...', totalPages - 2, totalPages - 1);
+      // Near the end
+      pages.push('...', totalPages - 3, totalPages - 2, totalPages - 1, totalPages);
     } else {
-      pages.push('...', currentPage - 1, currentPage, currentPage + 1, '...');
+      // In the middle
+      pages.push(
+        '...',
+        currentPage - 1,
+        currentPage,
+        currentPage + 1,
+        '...',
+        totalPages
+      );
     }
-    pages.push(totalPages);
+    
     return pages;
   };
 
   return (
-    <div className="pagination">
+    <div className="pagination" role="navigation" aria-label="Pagination">
       <button 
         className="pagination-btn pagination-btn-prev" 
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
+        aria-label="Previous page"
       >
-        &lt;
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M15 18l-6-6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
       </button>
-      {getPageNumbers().map((page, index) => (
-        page === '...' ? (
-          <span key={`ellipsis-${index}`} className="pagination-ellipsis">...</span>
-        ) : (
-          <button
-            key={page}
-            className={`pagination-btn ${currentPage === page ? 'active' : ''}`}
-            onClick={() => onPageChange(page)}
-          >
-            {page}
-          </button>
-        )
-      ))}
+      
+      <div className="pagination-numbers">
+        {getPageNumbers().map((page, index) => (
+          page === '...' ? (
+            <span 
+              key={`ellipsis-${index}`} 
+              className="pagination-ellipsis"
+              aria-hidden="true"
+            >
+              •••
+            </span>
+          ) : (
+            <button
+              key={page}
+              className={`pagination-btn number-btn ${currentPage === page ? 'active' : ''}`}
+              onClick={() => onPageChange(page)}
+              aria-label={`Page ${page}`}
+              aria-current={currentPage === page ? 'page' : undefined}
+            >
+              {page}
+            </button>
+          )
+        ))}
+      </div>
+
       <button 
         className="pagination-btn pagination-btn-next" 
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
+        aria-label="Next page"
       >
-        &gt;
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M9 18l6-6-6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
       </button>
     </div>
   );
@@ -152,7 +184,7 @@ function Activity() {
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.getElementById('activities').scrollIntoView({ behavior: 'smooth' });
   };
 
   return (

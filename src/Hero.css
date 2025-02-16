@@ -56,7 +56,7 @@
   z-index: 3;
   max-width: min(90%, 1000px);
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 1rem 0;
   text-align: center;
   color: #fff;
   opacity: 0;
@@ -361,4 +361,24 @@
     width: 6px;
     height: 6px;
   }
+}
+
+.header-section {
+  margin-bottom: 1rem;
+}
+
+.controls-container {
+  margin-bottom: 1rem;
+}
+
+.activities-container {
+  padding: 1rem;
+}
+
+.activities-layout {
+  margin: 0 auto;
+}
+
+.pagination {
+  margin: 1rem 0;
 }
