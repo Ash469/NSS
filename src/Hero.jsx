@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -58,6 +58,7 @@ const Hero = () => {
   };
 
   return (
+    // eslint-disable-next-line react/no-unknown-property
     <div section id="home" className="hero-section">
       <Swiper
         modules={[Autoplay, EffectFade, Navigation, Pagination]}

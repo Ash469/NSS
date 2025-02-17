@@ -105,3 +105,29 @@
     height: 250px;
   }
 }
+.unit-slide {
+  width: 100%;
+  margin: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-pagination-bullet {
+  background: #004080;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #ff6600;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #004080;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #ff6600;
+}

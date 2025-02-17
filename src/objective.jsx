@@ -1,4 +1,4 @@
-import React from "react";
+import "react";
 import "./objective.css";
 
 const Objectives = () => {
