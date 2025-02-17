@@ -39,48 +39,47 @@ const teamMembers = [
 // eslint-disable-next-line no-unused-vars
 const Units = [
   {
-    image: 'src/assets/10.png',
-    title: 'UNIT 1'
+    image: 'src/assets/unit1.png',
+    title: 'UNIT 1',
+    description: 'Environmental Conservation'  // Add descriptions for each unit
   },
   {
-    image: 'src/assets/11.png',
-    title: 'UNIT 2'
+    image: 'src/assets/unit2.png',
+    title: 'UNIT 2',
+    description: 'Community Health and Hygiene'
   },
   {
-    image: 'src/assets/12.png',
-    title: 'UNIT 3'
+    image: 'src/assets/unit3.png',
+    title: 'UNIT 3',
+    description: 'Education and Literacy'
   },
-  // {
-  //   image: 'src/assets/13.png',
-  //   title: 'UNIT 4'
-  // },
   {
-    image: 'src/assets/14.png',
+    image: 'src/assets/unit4.png',
+    title: 'UNIT 4'
+  },
+  {
+    image: 'src/assets/unit5.png',
     title: 'UNIT 5'
   },
   {
-    image: 'src/assets/15.png',
+    image: 'src/assets/unit6.png',
     title: 'UNIT 6'
   },
   {
-    image: 'src/assets/16.png',
+    image: 'src/assets/unit7.png',
     title: 'UNIT 7'
   },
   {
-    image: 'src/assets/17.png',
+    image: 'unit/assets/unit9.png',
     title: 'UNIT 8'
   },
   {
-    image: 'src/assets/18.png',
+    image: 'src/assets/unit9.png',
     title: 'UNIT 9'
   },
   {
-    image: 'src/assets/19.png',
+    image: 'src/assets/unit10.png',
     title: 'UNIT 10'
-  },
-  {
-    image: 'src/assets/20.png',
-    title: 'UNIT 11'
   },
 ];
 
@@ -95,7 +94,7 @@ const Team = () => {
           {teamMembers.map((member, index) => (
             <div key={index} className="team-member">
               <div className="member-image">
-                <img src={member.image} alt={member.name} />
+                <img src={member.image} alt={member.name} loading="lazy" />
                 <div className="member-social">
                   <a href={member.social.linkedin} target="_blank" rel="noopener noreferrer">
                     <i className="fab fa-linkedin"></i>
