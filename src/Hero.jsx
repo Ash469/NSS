@@ -5,8 +5,8 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import Image from './assets/image.png';
-import logo from './assets/logo.png';
+import Image from '/assets/image.png';
+import logo from '/assets/logo.png';
 import './Hero.css';
 
 const heroSlides = [

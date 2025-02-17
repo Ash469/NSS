@@ -11,7 +11,7 @@ const teamMembers = [
   {
     name: 'Dr. Debanga Raj Neog',
     position: 'NSS Overall Program Coordinator',
-    image: 'src/assets/overall.png',
+    image: '/assets/overall.png',
     social: {
       linkedin: 'https://linkedin.com',
       email: 'advisor@iitg.ac.in'
@@ -20,7 +20,7 @@ const teamMembers = [
   {
     name: 'Shubham Gitam',
     position: 'Joint Student Coordinator',
-    image: 'src/assets/jsc1.png',
+    image: '/assets/jsc1.png',
     social: {
       linkedin: 'https://linkedin.com',
       email: 'coordinator@iitg.ac.in'
@@ -29,7 +29,7 @@ const teamMembers = [
   {
     name: 'Rupjyoti Boro',
     position: 'Joint Student Coordinator',
-    image: 'src/assets/jsc2.png',
+    image: '/assets/jsc2.png',
     social: {
       linkedin: 'https://linkedin.com',
       email: 'tech@iitg.ac.in'
@@ -39,47 +39,51 @@ const teamMembers = [
 // eslint-disable-next-line no-unused-vars
 const Units = [
   {
-    image: 'src/assets/unit1.png',
+    image: '/assets/unit1.png',
     title: 'UNIT 1',
     description: 'Environmental Conservation'  // Add descriptions for each unit
   },
   {
-    image: 'src/assets/unit2.png',
+    image: '/assets/unit2.png',
     title: 'UNIT 2',
     description: 'Community Health and Hygiene'
   },
   {
-    image: 'src/assets/unit3.png',
+    image: '/assets/unit3.png',
     title: 'UNIT 3',
     description: 'Education and Literacy'
   },
   {
-    image: 'src/assets/unit4.png',
+    image: '/assets/unit4.png',
     title: 'UNIT 4'
   },
   {
-    image: 'src/assets/unit5.png',
+    image: '/assets/unit5.png',
     title: 'UNIT 5'
   },
   {
-    image: 'src/assets/unit6.png',
+    image: '/assets/unit6.png',
     title: 'UNIT 6'
   },
   {
-    image: 'src/assets/unit7.png',
+    image: '/assets/unit7.png',
     title: 'UNIT 7'
   },
   {
-    image: 'unit/assets/unit9.png',
+    image: '/assets/unit8.png',
     title: 'UNIT 8'
   },
   {
-    image: 'src/assets/unit9.png',
+    image: '/assets/unit9.png',
     title: 'UNIT 9'
   },
   {
-    image: 'src/assets/unit10.png',
+    image: '/assets/unit10.png',
     title: 'UNIT 10'
+  },
+  {
+    image: '/assets/unit11.png',
+    title: 'UNIT 11'
   },
 ];
 
