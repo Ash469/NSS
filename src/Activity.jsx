@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { categories, activities } from './data';
+import { categories, activities } from './ActivityData';
 import './Activity.css';
 
 const ActivityCard = ({ activity, layout }) => (
@@ -163,13 +163,15 @@ function Activity() {
   const itemsPerPage = layout === 'grid' ? 6 : 4;
 
   useEffect(() => {
+    let sorted;
     if (activeCategory === 'All') {
-      setFilteredActivities(activities);
+      sorted = [...activities];
     } else {
-      setFilteredActivities(
-        activities.filter((activity) => activity.category === activeCategory)
-      );
+      sorted = activities.filter((activity) => activity.category === activeCategory);
     }
+    // Reverse the order of activities
+    sorted = sorted.reverse();
+    setFilteredActivities(sorted);
     setCurrentPage(1);
   }, [activeCategory]);
 

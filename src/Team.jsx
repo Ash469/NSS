@@ -49,6 +49,8 @@ const Units = [
   { image: '/assets/unit9.png', title: 'UNIT 9' },
   { image: '/assets/unit10.png', title: 'UNIT 10' },
   { image: '/assets/unit11.png', title: 'UNIT 11' },
+  { image: '/assets/UC1.png', title: 'Unit Coordinator' },
+  { image: '/assets/UC2.png', title: 'Unit Coordinator' },
 ];
 
 const Team = () => {
@@ -72,25 +74,38 @@ const Team = () => {
           ))}
         </div>
 
+        <h2 className="section-title">Our Units</h2>
         <Swiper
           modules={[Autoplay, EffectFade, Navigation, Pagination, Keyboard]}
-          effect="fade"
-          speed={1000}
-          autoplay={{ delay: 4000, disableOnInteraction: false }}
-          pagination={{ clickable: true, dynamicBullets: true }}
+          spaceBetween={0}
+          slidesPerView={1} // Show only one preview at a time
+          loop={true} /* Ensure loop is set to true */
+          pagination={{ 
+            clickable: true,
+            bulletClass: 'swiper-pagination-bullet blue-bullet',
+            bulletActiveClass: 'swiper-pagination-bullet-active blue-bullet-active'
+          }}
+          keyboard={{ enabled: true }}
           navigation={true}
-          loop={true}
-          keyboard={{ enabled: true, onlyInViewport: true }}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
           breakpoints={{
-            640: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 }
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 10
+            },
+            768: {
+              slidesPerView: 1, // Show only one preview at a time for larger screens as well
+              spaceBetween: 10
+            }
           }}
         >
           {Units.map((unit, index) => (
             <SwiperSlide key={index}>
-              <div className="unit-slide">
-                <img src={unit.image} alt={unit.title} />
+              <div className="unit-card">
+                <img src={unit.image} alt={unit.title} loading="lazy" />
               </div>
             </SwiperSlide>
           ))}

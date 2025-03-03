@@ -5,25 +5,28 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import Image from '/assets/image.png';
+import Banner1 from '/assets/banner1.jpg';
+import Banner2 from '/assets/banner4.jpg';
+import Banner3 from '/assets/banner6.jpg';
+
 import logo from '/assets/logo.png';
 import './Hero.css';
 
 const heroSlides = [
   {
-    image: Image,
+    image: Banner1,
     title: 'BRINGING THE CHANGE',
     subtitle: 'TOGETHER.',
     description: 'The Indian Institutes of Technology (IITs) were created to engineer technological innovations that would improve the living standards of the society at large.'
   },
   {
-    image: Image,
+    image: Banner2,
     title: 'EMPOWERING COMMUNITIES',
     subtitle: 'ONE STEP AT A TIME',
     description: 'Join us in our mission to create positive social impact through education, environmental conservation, and community development initiatives.'
   },
   {
-    image: Image,
+    image: Banner3,
     title: 'VOLUNTEER WITH US',
     subtitle: 'MAKE A DIFFERENCE',
     description: 'We invite all interested Faculty Members, Officers, Staff Members and Students to join NSS Cell as a Volunteer. Join here!'
@@ -70,7 +73,10 @@ const Hero = () => {
         }}
         pagination={{
           clickable: true,
-          dynamicBullets: true,
+          dynamicBullets: false, // Change to false for consistent bullet size
+          renderBullet: function (index, className) {
+            return `<span class="${className}"></span>`;
+          }
         }}
         navigation={true}
         loop={true}
@@ -98,7 +104,7 @@ const Hero = () => {
         ))}
       </Swiper>
       
-      <div className={`nav-wrapper ${isScrolled ? 'scrolled' : ''}`}>
+      <div className="nav-wrapper">
         <div className="nss-logo">
           <img src={logo} alt="NSS Logo" />
           <span>NSS, IIT GUWAHATI</span>

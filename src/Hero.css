@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   position: relative;
-  height: 100%;
+  height: 100vh; /* Change from 100% to 100vh */
   width: 100%;
   overflow: hidden;
   background-color: #000;
@@ -12,7 +12,9 @@
 /* Swiper Styles */
 .hero-swiper {
   width: 100%;
-  height: 100%;
+  height: 100vh; /* Change from 100% to 100vh */
+  margin: 0 !important; /* Remove default Swiper margins */
+  padding: 0 !important; /* Remove default Swiper padding */
 }
 
 .hero-slide {
@@ -22,6 +24,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 /* Image and Overlay */
@@ -29,6 +32,8 @@
   position: absolute;
   inset: 0;
   z-index: 1;
+  width: 100%;
+  height: 100%;
 }
 
 .hero-image img {
@@ -36,6 +41,7 @@
   height: 100%;
   object-fit: cover;
   filter: brightness(0.8);
+  object-position: center;
 }
 
 .overlay {
@@ -90,26 +96,44 @@
 
 /* Navigation Elements */
 .nss-logo {
-  position: fixed;
-  top: 1rem;
-  left: 1rem;
-  z-index: 100;
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 12px;
+  z-index: 1001; /* Ensure logo stays above other elements */
 }
 
 .nss-logo img {
-  height: clamp(2.5rem, 4vw, 3.5rem);
+  height: 40px;
   width: auto;
-  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.3));
 }
 
 .nss-logo span {
-  color: #fff;
-  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  color: #0066cc;
   font-weight: 600;
-  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+  font-size: 1.5rem;
+}
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .nss-logo {
+    flex-shrink: 0; /* Prevent logo from shrinking */
+  }
+  
+  .nss-logo span {
+    font-size: 1.2rem; /* Slightly smaller font for mobile */
+    white-space: nowrap; /* Prevent text wrapping */
+    display: block; /* Ensure visibility */
+  }
+  
+  .nav-wrapper {
+    padding: 10px 20px; /* Adjust padding for mobile */
+  }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+  .nss-logo span {
+    font-size: 1rem;
+  }
 }
 
 /* Mobile Menu Button */
@@ -119,8 +143,9 @@
   top: 1rem;
   right: 1rem;
   z-index: 100;
-  background: transparent;
-  border: none;
+  background: #0066cc;
+  color: #fff;
+  border-radius: 50%;
   cursor: pointer;
   width: 40px;
   height: 40px;
@@ -172,33 +197,26 @@
 
 /* Navigation Menu */
 .hero-nav {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  z-index: 90;
   display: flex;
-  gap: 1.5rem;
-  transition: all 0.3s ease;
+  gap: 20px;
 }
 
 .hero-nav button {
   background: none;
   border: none;
-  color: #fff;
-  text-decoration: none;
-  font-size: clamp(0.9rem, 1.5vw, 1rem);
-  font-weight: 500;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-  cursor: pointer;
+  color: #0066cc;
+  font-size: 0.9rem;
+  font-weight: 00;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
 
-.hero-nav button i {
-  font-size: 1.2rem;
+.hero-nav button:hover {
+  background-color: #f0f7ff;
 }
 
 .hero-nav.scrolled button {
@@ -208,12 +226,6 @@
 .hero-nav.scrolled button:hover {
   background: rgba(0, 64, 128, 0.1);
   color: #4CAF50;
-}
-
-.hero-nav button:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: #4CAF50;
-  transform: translateY(-2px);
 }
 
 .cta-button {
@@ -254,6 +266,7 @@
   border-radius: 50%;
   color: #fff;
   transition: all 0.3s ease;
+  margin-bottom: 40px;
 }
 
 .swiper-button-prev:hover,
@@ -270,15 +283,30 @@
 
 /* Swiper Pagination */
 .swiper-pagination-bullet {
-  width: 8px;
-  height: 8px;
-  background: rgba(255, 255, 255, 0.5);
+  width: 10px !important;
+  height: 10px !important;
+  background: rgba(0, 123, 255, 0.5) !important;
+  opacity: 0.7;
+  margin: 0 6px !important;
   transition: all 0.3s ease;
+  border-radius: 50%;
 }
 
 .swiper-pagination-bullet-active {
-  background: #4CAF50;
+  background: #007bff !important;
+  opacity: 1;
+  width: 24px !important;
+  border-radius: 12px !important;
   transform: scale(1.2);
+}
+
+.swiper-pagination {
+  position: absolute !important;
+  bottom: 40px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: auto !important;
+  z-index: 20;
 }
 
 /* Animations */
@@ -301,17 +329,14 @@
 
   .hero-nav {
     position: fixed;
-    top: 0;
+    top: 80px;
     right: -100%;
-    height: 100vh;
-    width: min(80%, 300px);
-    background: rgba(0, 0, 0, 0.95);
-    backdrop-filter: blur(10px);
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    transition: right 0.3s ease;
+    background: white;
+    padding: 20px;
+    width: 250px;
+    height: 100vh;
+    transition: 0.3s ease;
   }
 
   .hero-nav.active {
@@ -326,9 +351,7 @@
     padding: 0 1rem;
   }
 
-  .nss-logo span {
-    display: none;
-  }
+ 
 
   .swiper-button-prev,
   .swiper-button-next {
@@ -382,3 +405,27 @@
 .pagination {
   margin: 1rem 0;
 }
+
+.nav-wrapper {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1200px;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* .nav-wrapper.scrolled {
+  top: 0;
+  width: 100%;
+  border-radius: 0;
+} */
