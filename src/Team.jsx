@@ -38,19 +38,17 @@ const teamMembers = [
 ];
 
 const Units = [
-  { image: '/assets/unit1.png', title: 'UNIT 1', description: 'Environmental Conservation' },
-  { image: '/assets/unit2.png', title: 'UNIT 2', description: 'Community Health and Hygiene' },
-  { image: '/assets/unit3.png', title: 'UNIT 3', description: 'Education and Literacy' },
-  { image: '/assets/unit4.png', title: 'UNIT 4' },
-  { image: '/assets/unit5.png', title: 'UNIT 5' },
-  { image: '/assets/unit6.png', title: 'UNIT 6' },
-  { image: '/assets/unit7.png', title: 'UNIT 7' },
-  { image: '/assets/unit8.png', title: 'UNIT 8' },
-  { image: '/assets/unit9.png', title: 'UNIT 9' },
-  { image: '/assets/unit10.png', title: 'UNIT 10' },
-  { image: '/assets/unit11.png', title: 'UNIT 11' },
-  { image: '/assets/UC1.png', title: 'Unit Coordinator' },
-  { image: '/assets/UC2.png', title: 'Unit Coordinator' },
+  { image: '/assets/teams/10.png', title: 'UNIT 1', },
+  { image: '/assets/teams/11.png', title: 'UNIT 2', },
+  { image: '/assets/teams/12.png', title: 'UNIT 3',},
+  { image: '/assets/teams/13.png', title: 'UNIT 4' },
+  { image: '/assets/teams/14.png', title: 'UNIT 5' },
+  { image: '/assets/teams/15.png', title: 'UNIT 6' },
+  { image: '/assets/teams/16.png', title: 'UNIT 7' },
+  { image: '/assets/teams/17.png', title: 'UNIT 8' },
+  { image: '/assets/teams/18.png', title: 'UNIT 9' },
+  { image: '/assets/teams/19.png', title: 'UNIT 10' },
+  { image: '/assets/teams/20.png', title: 'UNIT 11' },
 ];
 
 const Team = () => {
@@ -104,8 +102,12 @@ const Team = () => {
         >
           {Units.map((unit, index) => (
             <SwiperSlide key={index}>
-              <div className="unit-card">
-                <img src={unit.image} alt={unit.title} loading="lazy" />
+              <div 
+                className="unit-card" 
+                style={{
+                  backgroundImage: `url(${unit.image})`
+                }}
+              >
               </div>
             </SwiperSlide>
           ))}
