@@ -1,4 +1,4 @@
-import React from 'react';
+import 'react';
 import './Team.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade, Navigation, Pagination, Keyboard } from 'swiper/modules';

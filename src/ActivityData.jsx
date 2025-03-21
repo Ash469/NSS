@@ -1,4 +1,3 @@
-import Img from '/assets/image.png'
 export const categories = ['All', 'Cleanliness', 'Donations', 'Teaching', 'Welfare', 'Awareness']
 
 export const activities = [
