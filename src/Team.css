@@ -1,0 +1,218 @@
+/* General Styles */
+body, html {
+  overflow-x: hidden;
+}
+
+.team-section {
+  padding: 5vh 5vw;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.container {
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+.section-title {
+  color: #004080;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.section-subtitle {
+  color: #666;
+  font-size: 1.8vh;
+  margin-bottom: 5vh;
+}
+
+
+
+
+
+
+
+/* Container for Joint Student Coordinators */
+.joint-coordinators {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+
+
+.team-member {
+  background: white;
+  border-radius: 2vw;
+  overflow: hidden;
+  box-shadow: 0 2vh 4vh rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-1vh);
+}
+
+.member-image {
+  position: relative;
+  height: 35vh;
+  overflow: hidden;
+}
+
+.member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.member-info {
+  padding: 2vh;
+}
+
+.member-info h3 {
+  color: #004080;
+  font-size: 2vh;
+  margin: 0;
+}
+
+.member-info p {
+  color: #666;
+  font-size: 1.8vh;
+  margin-top: 1vh;
+}
+
+.unit-card {
+  width: 100%;
+  height: 0;
+  padding-bottom: 75%; /* This creates a responsive 4:3 aspect ratio */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  position: relative;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.unit-card:hover {
+  transform: scale(1.02);
+}
+
+.unit-card img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.swiper {
+  padding: 20px 10px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #333;
+}
+
+.swiper-pagination {
+  position: relative !important;
+  bottom: 0px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: auto !important;
+  z-index: 20;
+}
+
+/* Ensure Swiper container and slides have correct styles */
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Previous Team Member Styles */
+.previous-team {
+  margin-top: 6vh;
+  margin-bottom: 4vh;
+}
+
+.previous-team .team-member {
+  margin: 0 auto;
+}
+
+.prev_member-image {
+  position: relative;
+  height: 50vh;
+  overflow: hidden;
+  border-radius: 2vw 2vw 0 0;
+}
+
+.prev_member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Responsive adjustments for previous team */
+@media (max-width: 768px) {
+  .prev_member-image {
+    height: 40vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .prev_member-image {
+    height: 35vh;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(35vw, 1fr));
+    gap: 3vh;
+  }
+
+  .member-image {
+    height: 30vh;
+  }
+
+  .unit-card img {
+    width: 100%;
+    height: 500px;
+  }
+
+  .unit-card {
+    padding-bottom: 100%; /* Square aspect ratio for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(40vw, 1fr));
+    gap: 2vh;
+  }
+
+  .member-image {
+    height: 25vh;
+  }
+
+  .unit-card img {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .unit-card {
+    padding-bottom: 56.25%; /* 16:9 aspect ratio for larger screens */
+  }
+}
+

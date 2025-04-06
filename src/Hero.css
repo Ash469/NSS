@@ -1,0 +1,431 @@
+/* Hero Section Container */
+.hero-section {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 100vh; /* Change from 100% to 100vh */
+  width: 100%;
+  overflow: hidden;
+  background-color: #000;
+}
+
+/* Swiper Styles */
+.hero-swiper {
+  width: 100%;
+  height: 100vh; /* Change from 100% to 100vh */
+  margin: 0 !important; /* Remove default Swiper margins */
+  padding: 0 !important; /* Remove default Swiper padding */
+}
+
+.hero-slide {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Image and Overlay */
+.hero-image {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.8);
+  object-position: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  z-index: 2;
+}
+
+/* Content Styles */
+.hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: min(90%, 1000px);
+  margin: 0 auto;
+  padding: 1rem 0;
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+  display: block;
+  font-size: clamp(1.5rem, 4vw, 3.5rem);
+  color: #4CAF50;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero-description {
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  line-height: 1.6;
+  margin: 1.5rem auto;
+  max-width: min(90%, 800px);
+  opacity: 0.9;
+}
+
+/* Navigation Elements */
+.nss-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 1001; /* Ensure logo stays above other elements */
+}
+
+.nss-logo img {
+  height: 40px;
+  width: auto;
+}
+
+.nss-logo span {
+  color: #0066cc;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .nss-logo {
+    flex-shrink: 0; /* Prevent logo from shrinking */
+  }
+  
+  .nss-logo span {
+    font-size: 1.2rem; /* Slightly smaller font for mobile */
+    white-space: nowrap; /* Prevent text wrapping */
+    display: block; /* Ensure visibility */
+  }
+  
+  .nav-wrapper {
+    padding: 10px 20px; /* Adjust padding for mobile */
+  }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+  .nss-logo span {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 100;
+  background: #0066cc;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+
+.hamburger {
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  bottom: -8px;
+}
+
+.hamburger.active {
+  background: transparent;
+}
+
+.hamburger.active::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.hamburger.active::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+/* Navigation Menu */
+.hero-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.hero-nav button {
+  background: none;
+  border: none;
+  color: #0066cc;
+  font-size: 0.9rem;
+  font-weight: 00;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.hero-nav button:hover {
+  background-color: #f0f7ff;
+}
+
+.hero-nav.scrolled button {
+  color: #004080;
+}
+
+.hero-nav.scrolled button:hover {
+  background: rgba(0, 64, 128, 0.1);
+  color: #4CAF50;
+}
+
+.cta-button {
+  background: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+/* Menu Overlay */
+.menu-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 80;
+  backdrop-filter: blur(4px);
+}
+
+/* Swiper Navigation */
+.swiper-button-prev,
+.swiper-button-next {
+  width: 3rem;
+  height: 3rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  border-radius: 50%;
+  color: #fff;
+  transition: all 0.3s ease;
+  margin-bottom: 40px;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Swiper Pagination */
+.swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+  background: rgba(0, 123, 255, 0.5) !important;
+  opacity: 0.7;
+  margin: 0 6px !important;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+}
+
+.swiper-pagination-bullet-active {
+  background: #007bff !important;
+  opacity: 1;
+  width: 24px !important;
+  border-radius: 12px !important;
+  transform: scale(1.2);
+}
+
+.swiper-pagination {
+  position: absolute !important;
+  bottom: 40px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: auto !important;
+  z-index: 20;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero-nav {
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    width: 250px;
+    height: 100vh;
+    transition: 0.3s ease;
+  }
+
+  .hero-nav.active {
+    right: 0;
+  }
+
+  .menu-overlay {
+    display: block;
+  }
+
+  .hero-content {
+    padding: 0 1rem;
+  }
+
+ 
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content {
+    padding: 0 0.5rem;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .cta-button {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+
+  .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+.header-section {
+  margin-bottom: 1rem;
+}
+
+.controls-container {
+  margin-bottom: 1rem;
+}
+
+.activities-container {
+  padding: 1rem;
+}
+
+.activities-layout {
+  margin: 0 auto;
+}
+
+.pagination {
+  margin: 1rem 0;
+}
+
+.nav-wrapper {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1200px;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* .nav-wrapper.scrolled {
+  top: 0;
+  width: 100%;
+  border-radius: 0;
+} */
