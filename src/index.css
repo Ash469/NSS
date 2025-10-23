@@ -1,3 +1,4 @@
+@import "tailwindcss";
 
 body {
     margin: 0;
@@ -15,7 +16,6 @@ body {
    text-align: center;
    color: var(--primary-blue);
    font-size: clamp(2rem, 4vw, 3rem);
-   margin-bottom: 3rem;
    position: relative;
    padding-bottom: 1rem;
 }
@@ -29,4 +29,19 @@ body {
    width: 100px;
    height: 3px;
    background: var(--primary-green);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@layer utilities {
+  .animate-fadeIn {
+    animation: fadeIn 0.3s ease-out;
+  }
+}
+
+.team-section {
+  text-align: center;
 }
