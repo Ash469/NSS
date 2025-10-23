@@ -121,10 +121,7 @@
     white-space: nowrap; /* Prevent text wrapping */
     display: block; /* Ensure visibility */
   }
-  
-  .nav-wrapper {
-    padding: 10px 20px; /* Adjust padding for mobile */
-  }
+
 }
 
 /* For very small screens */
@@ -409,7 +406,7 @@
   top: 10px;
   left: 50%;
   transform: translateX(-50%);
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
   padding: 15px 30px;
   display: flex;

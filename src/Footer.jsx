@@ -67,7 +67,6 @@ const Footer = () => {
             <li><a href="/events">Latest Events</a></li>
             <li><a href="/activities" >Activities</a></li>
             <li><a href="/team">Team</a></li> 
-            <li><a href="#contact" onClick={(e) => handleScrollClick(e, 'contact')}>Contact</a></li>
           </ul>
         </div>
 
