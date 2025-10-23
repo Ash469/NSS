@@ -1,7 +1,42 @@
-import 'react';
+import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Add this import
 import './Footer.css';
 
 const Footer = () => {
+  const navigate = useNavigate(); // Add this
+
+  // Function to handle Team navigation
+  const handleTeamClick = (e) => {
+    e.preventDefault();
+    navigate('/team');
+  };
+
+  // Function to handle scroll navigation for other sections
+  const handleScrollClick = (e, sectionId) => {
+    e.preventDefault();
+    // If we're not on the home page, navigate to home first
+    if (window.location.pathname !== '/') {
+      navigate('/');
+      // Wait for navigation to complete then scroll
+      setTimeout(() => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          const yOffset = -40;
+          const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      // If we're already on home page, just scroll
+      const section = document.getElementById(sectionId);
+      if (section) {
+        const yOffset = -40;
+        const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
     <footer className="footer">
       <div className="footer-content">
@@ -27,11 +62,12 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#activities">Activities</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" onClick={(e) => handleScrollClick(e, 'home')}>Home</a></li>
+            <li><a href="#about" onClick={(e) => handleScrollClick(e, 'about')}>About</a></li>
+            <li><a href="/events">Latest Events</a></li>
+            <li><a href="/activities" >Activities</a></li>
+            <li><a href="/team">Team</a></li> 
+            <li><a href="#contact" onClick={(e) => handleScrollClick(e, 'contact')}>Contact</a></li>
           </ul>
         </div>
 
@@ -49,15 +85,6 @@ const Footer = () => {
             <i className="fas fa-envelope"></i>
             nss@iitg.ac.in
           </p>
-        </div>
-
-        <div className="footer-section">
-          <h3>Newsletter</h3>
-          <p>Subscribe to our newsletter for updates on our activities and events.</p>
-          <form className="newsletter-form">
-            <input type="email" placeholder="Enter your email" required />
-            <button type="submit">Subscribe</button>
-          </form>
         </div>
       </div>
 

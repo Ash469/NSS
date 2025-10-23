@@ -4,7 +4,7 @@ import "./objective.css";
 const Objectives = () => {
   return (
     <section id="objectives" className="objectives-container">
-      <h2 className="section-title">Our Objectives</h2>
+      <h2 className="section-title">Objectives</h2>
       <div className="objectives-content">
         <div className="objective">
           <div className="objective-image">

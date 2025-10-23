@@ -138,7 +138,7 @@ export const activities = [
     title: 'World Environment Day',
     description: 'NSS IIT Guwahati celebrated World Environment Day with a tree plantation drive and awareness program.',
     category: 'Teaching',
-    date: '5 June 2022',
+    date: '5 June 2024',
     image: 'assets/events/environment_5_6_2022.png'
   },
   {
@@ -154,7 +154,7 @@ export const activities = [
     title: 'Blood Donation',
     description: 'Around 66+ units of blood were collected in the Blood Donation Camp organized by NSS IIT Guwahati',
     category: 'Donations',
-    date: '5 June 2022',
+    date: '25 August 2024',
     image: 'assets/events/blood_donation.jpg'
   },
   {
@@ -162,7 +162,7 @@ export const activities = [
     title: 'Hand Wash Distribution',
     description: 'Around 300+ hand wash were distributed in the Hand Wash Distribution Camp organized by NSS IIT Guwahati',
     category: 'Welfare',
-    date: '5 June 2022',
+    date: '25 August 2024',
     image: 'assets/events/hand_wash_distrubtion.jpg'
   },
   {
@@ -170,7 +170,7 @@ export const activities = [
     title: 'Pad Distribution',
     description: 'Around 1000+ pads were distributed in the Pad Distribution Camp organized by NSS IIT Guwahati',
     category: 'Welfare',
-    date: '5 June 2022',
+    date: '25 August 2024',
     image: 'assets/events/handwash_distributin2.jpg'
   }
 ]
