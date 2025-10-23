@@ -1,6 +1,32 @@
-/* @import "tailwindcss"; */
-body{
+
+body {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+  --primary-blue: #004080;
+  --primary-green: #4CAF50;
+  --light-gray: #f9f9f9;
+  --text-dark: #333;
+  --text-light: #666;
+
+  font-family: 'Poppins', sans-serif;
+}
+
+.section-title {
+   text-align: center;
+   color: var(--primary-blue);
+   font-size: clamp(2rem, 4vw, 3rem);
+   margin-bottom: 3rem;
+   position: relative;
+   padding-bottom: 1rem;
+}
+
+.section-title::after {
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 100px;
+   height: 3px;
+   background: var(--primary-green);
 }

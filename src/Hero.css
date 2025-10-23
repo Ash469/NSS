@@ -1,20 +1,18 @@
-/* Hero Section Container */
 .hero-section {
   margin: 0;
   padding: 0;
   position: relative;
-  height: 100vh; /* Change from 100% to 100vh */
+  height: 100%;
   width: 100%;
   overflow: hidden;
   background-color: #000;
 }
 
-/* Swiper Styles */
 .hero-swiper {
   width: 100%;
-  height: 100vh; /* Change from 100% to 100vh */
-  margin: 0 !important; /* Remove default Swiper margins */
-  padding: 0 !important; /* Remove default Swiper padding */
+  height: 100vh; 
+  margin: 0 !important;
+  padding: 0 !important; 
 }
 
 .hero-slide {
@@ -423,9 +421,3 @@
   z-index: 1000;
   transition: all 0.3s ease;
 }
-
-/* .nav-wrapper.scrolled {
-  top: 0;
-  width: 100%;
-  border-radius: 0;
-} */

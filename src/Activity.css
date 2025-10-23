@@ -23,17 +23,30 @@
     transform: scale(1.05);
   }
   .activity-content h3:hover {
-    color: #007bff; /* Change to your preferred highlight color */
+    color: #007bff; 
     text-decoration: underline;
   }
   
-  .header-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 1rem;
-  }
-  
+  .section-title {
+  text-align: center;
+  color: #004080;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 3rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: #4CAF50;
+}
+
   .header-content {
     max-width: 800px;
     margin: 0 auto;
