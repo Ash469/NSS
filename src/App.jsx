@@ -1,6 +1,6 @@
-// src/App.jsx
 import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// --- CHANGE THIS IMPORT ---
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'; // Use HashRouter
 
 // Components
 import Navbar from './Navbar';
@@ -17,7 +17,7 @@ import About from './About';
 const Team = React.lazy(() => import('./Team'));
 const ActivitiesPage = React.lazy(() => import('./pages/ActivitiesPage'));
 const EventsPage = React.lazy(() => import('./pages/EventsPage'));
-const VolunteerHours = React.lazy(() => import('./pages/voluterPage'));
+const VolunteerHours = React.lazy(() => import('./pages/VolunteerHours')); 
 
 // Loading component
 const PageLoader = () => (
@@ -39,10 +39,10 @@ const Home = () => (
 
 const App = () => {
   return (
+    // Router is now HashRouter
     <Router>
       <Navbar />
-
-      <main>
+      <main> {/* Removed pt-20 from here */}
         <Suspense fallback={<PageLoader />}>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -59,3 +59,4 @@ const App = () => {
 };
 
 export default App;
+

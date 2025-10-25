@@ -1,23 +1,19 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; // Add this import
+import { useNavigate } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
-  const navigate = useNavigate(); // Add this
+  const navigate = useNavigate(); 
 
-  // Function to handle Team navigation
   const handleTeamClick = (e) => {
     e.preventDefault();
     navigate('/team');
   };
 
-  // Function to handle scroll navigation for other sections
   const handleScrollClick = (e, sectionId) => {
     e.preventDefault();
-    // If we're not on the home page, navigate to home first
     if (window.location.pathname !== '/') {
       navigate('/');
-      // Wait for navigation to complete then scroll
       setTimeout(() => {
         const section = document.getElementById(sectionId);
         if (section) {
@@ -27,7 +23,6 @@ const Footer = () => {
         }
       }, 100);
     } else {
-      // If we're already on home page, just scroll
       const section = document.getElementById(sectionId);
       if (section) {
         const yOffset = -40;
