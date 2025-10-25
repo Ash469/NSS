@@ -11,7 +11,7 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="section-title mb-16">About NSS IIT Guwahati</h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div className="w-full h-auto rounded-xl shadow-lg overflow-hidden">
+          <div className="w-full h-auto rounded-xl overflow-hidden">
             <img 
               src="assets/logo.png" 
               alt="NSS Team" 
