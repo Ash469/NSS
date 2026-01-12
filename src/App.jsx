@@ -1,6 +1,5 @@
 import React, { Suspense } from 'react';
-// --- CHANGE THIS IMPORT ---
-import { HashRouter as Router, Routes, Route } from 'react-router-dom'; // Use HashRouter
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Components
 import Navbar from './Navbar';
