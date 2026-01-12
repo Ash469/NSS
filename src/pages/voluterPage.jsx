@@ -112,7 +112,7 @@ const VolunteerHours = () => {
             <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <div className="bg-white p-6 sm:p-8 rounded-lg shadow-md">
                     <p className="text-gray-600 mb-6 text-center">
-                        Enter your official IIT Guwahati Roll Number to view your total recorded NSS Work hours.
+                        Enter your IIT Guwahati Roll Number to view your total recorded NSS Work hours.
                     </p>
                     <form onSubmit={handleSubmit}>
 
