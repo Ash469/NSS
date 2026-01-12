@@ -69,10 +69,14 @@ const Navbar = () => {
 
     return (
         <div className="nav-wrapper">
-            <div className="nss-logo">
+            <button 
+                className="nss-logo" 
+                onClick={() => scrollToSection('home')}
+                style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
+            >
                 <img src="assets/logo.png" alt="NSS Logo" />
                 <span>NSS, IIT GUWAHATI</span>
-            </div>
+            </button>
 
             <button className="menu-toggle" onClick={toggleMenu}>
                 <span className={`hamburger ${isMenuOpen ? 'active' : ''}`}></span>
