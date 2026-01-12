@@ -14,16 +14,20 @@ import 'swiper/css/pagination';
 // ... (Keep all your data arrays as they are) ...
 const programCoordinator = [
     {
-      name: 'Dr. Debanga Raj Neog',
+      name: 'Dr. Nipjyoti Bharadwaj',
       position: 'NSS Programme Coordinator',
-      image: 'assets/overall.png'
+      image: 'assets/Pc.png',
+      contact: {
+        number: '0361 258 2932',
+        email: 'pc.nss@iitg.ac.in'
+      }
     }
   ];
   const officeStaff = [
     {
       name: 'Mr. Deep Jyoti Baruah',
-      position: 'Office Staff',
-      image: 'assets/staff/21.jpg',
+      position: 'Junior Assistant',
+      image: './assets/staff/21.jpg',
       contact: {
         number: '+91 3612582931',
         responsibilities: [
@@ -85,7 +89,7 @@ const programCoordinator = [
     {
       unit: 'Unit 03 Sandhyachal',
       members: [
-        { name: 'Dr. Nipjyoti Bharadwaj', position: 'PO', image: 'assets/staff/unit3/9.png' },
+        // { name: 'Dr. Nipjyoti Bharadwaj', position: 'PO', image: 'assets/staff/unit3/9.png' },
         { name: 'Mr. Manash Protim Dutta', position: 'APO', image: 'assets/staff/unit3/10.png' }
       ]
     },
@@ -374,7 +378,7 @@ const Team = () => {
         {/* Programme Coordinator - Single */}
         <div id="program-coordinator" className="mb-16 md:mb-20"> 
           <h3 className="text-2xl font-semibold text-blue-900 mb-8 text-center section-heading-style">Programme Coordinator</h3>
-          <div className="single-member-grid max-w-sm mx-auto"> {/* Centered and restricted width */}
+          <div className="single-member-grid max-w-md mx-auto"> {/* Centered and restricted width */}
             {programCoordinator.map((member, index) => (
               <div key={index} className="single-member-card bg-white rounded-lg shadow-md overflow-hidden">
                 <div className="member-image h-64"> {/* Adjusted height */}
@@ -382,7 +386,17 @@ const Team = () => {
                 </div>
                 <div className="member-info p-5 text-center">
                   <h4 className="text-xl font-semibold text-gray-800">{member.name}</h4>
-                  <p className="text-blue-600">{member.position}</p>
+                  <p className="text-blue-600 mb-4">{member.position}</p>
+                  <div className="contact-info border-t pt-4">
+                    <div className="mb-3">
+                      <p className="text-xs text-gray-600">Tel:</p>
+                      <a href={`tel:${member.contact.number}`} className="text-sm font-medium text-blue-600 hover:underline">{member.contact.number}</a>
+                    </div>
+                    <div>
+                      <p className="text-xs text-gray-600">Email:</p>
+                      <a href={`mailto:${member.contact.email}`} className="text-sm font-medium text-blue-600 hover:underline break-all">{member.contact.email}</a>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}

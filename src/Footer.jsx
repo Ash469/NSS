@@ -11,6 +11,18 @@ const Footer = () => {
     navigate('/team');
   };
 
+  // Function to handle Events navigation
+  const handleEventsClick = (e) => {
+    e.preventDefault();
+    navigate('/events');
+  };
+
+  // Function to handle Activities navigation
+  const handleActivitiesClick = (e) => {
+    e.preventDefault();
+    navigate('/activities');
+  };
+
   // Function to handle scroll navigation for other sections
   const handleScrollClick = (e, sectionId) => {
     e.preventDefault();
@@ -62,11 +74,11 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="#home" onClick={(e) => handleScrollClick(e, 'home')}>Home</a></li>
-            <li><a href="#about" onClick={(e) => handleScrollClick(e, 'about')}>About</a></li>
-            <li><a href="/events">Latest Events</a></li>
-            <li><a href="/activities" >Activities</a></li>
-            <li><a href="/team">Team</a></li> 
+            <li><a href="#" onClick={(e) => handleScrollClick(e, 'home')}>Home</a></li>
+            <li><a href="#" onClick={(e) => handleScrollClick(e, 'about')}>About</a></li>
+            <li><a href="#" onClick={handleEventsClick}>Latest Events</a></li>
+            <li><a href="#" onClick={handleActivitiesClick}>Activities</a></li>
+            <li><a href="#" onClick={handleTeamClick}>Team</a></li> 
           </ul>
         </div>
 

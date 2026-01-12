@@ -54,7 +54,7 @@ const Hero = () => {
           <SwiperSlide key={index}>
             <div className="hero-slide">
               <div className="hero-image">
-                <img src="assets/banner1.jpg" alt={slide.title} />
+              <img src={slide.image} alt={slide.title} />
                 <div className="overlay"></div>
               </div>
               <div className="hero-content">
@@ -65,7 +65,7 @@ const Hero = () => {
                 <p className="hero-description">{slide.description}</p>
                 <button 
                   className="cta-button"
-                  onClick={() => window.open('https://forms.office.com/Pages/DesignPageV2.aspx?prevorigin=shell&origin=NeoPortalPage&subpage=design&id=jacKheGUxkuc84wRtTBwHC4GMrMZVLFLrBQexzEsxFZUM1E4SDFQVTg4TkVGUDRWTjhMU09ZTTFVVy4u', '_blank')}
+                  onClick={() => window.open('https://forms.office.com/Pages/ResponsePage.aspx?id=jacKheGUxkuc84wRtTBwHC4GMrMZVLFLrBQexzEsxFZUM1E4SDFQVTg4TkVGUDRWTjhMU09ZTTFVVy4u', '_blank')}
                 >
                   Join Now
                 </button>
