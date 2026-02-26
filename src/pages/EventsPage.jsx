@@ -91,6 +91,11 @@ const EventsPage = () => {
 
   // Event data
   const eventsData = {
+    "CRPF RAISING DAY": [
+      "assets/events/crpf_raising/1.jpg",
+      "assets/events/crpf_raising/2.jpg",
+      "assets/events/crpf_raising/3.jpg"
+    ],
     "REPUBLIC DAY PARADE": [
       "assets/events/republic_day/1.jpg",
       "assets/events/republic_day/2.jpg",
@@ -152,6 +157,13 @@ const EventsPage = () => {
 
       {/* Events Grid */}
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <EventCard
+          img="assets/event1.jpg"
+          alt="CRPF RAISING DAY"
+          title="CRPF RAISING DAY"
+          date="February 21, 2026"
+          onClick={() => handleEventClick("CRPF RAISING DAY")}
+        />
         <EventCard
           img="assets/event1.jpg"
           alt="REPUBLIC DAY PARADE"

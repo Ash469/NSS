@@ -11,6 +11,11 @@ const Events = () => {
 
   // Event data with multiple images
   const eventsData = {
+    "CRPF RAISING DAY": [
+      "assets/events/crpf_raising/1.jpg",
+      "assets/events/crpf_raising/2.jpg",
+      "assets/events/crpf_raising/3.jpg"
+    ],
     "REPUBLIC DAY PARADE": [
       "assets/events/republic_day/1.jpg",
       "assets/events/republic_day/2.jpg",
@@ -25,11 +30,6 @@ const Events = () => {
       "assets/events/plastic_free/1.jpeg",
       "assets/events/plastic_free/2.jpeg",
       "assets/events/plastic_free/3.jpeg"
-    ],
-    "INDEPENDENCE DAY": [
-      "assets/events/independence_day/1.jpg",
-      "assets/events/independence_day/2.jpg",
-      "assets/events/independence_day/3.jpg"
     ],
   };
 
@@ -72,6 +72,13 @@ const Events = () => {
 
       {/* --- Show only 4 events for the summary --- */}
       <div className="events-content">
+        <div className="event" onClick={() => handleEventClick("CRPF RAISING DAY")}>
+          <div className="event-image">
+            <img src="assets/event1.jpg" alt="CRPF RAISING DAY" />
+          </div>
+          <h3>CRPF RAISING DAY</h3>
+          <div className="event-date">February 21, 2026</div>
+        </div>
         <div className="event" onClick={() => handleEventClick("REPUBLIC DAY PARADE")}>
           <div className="event-image">
             <img src="assets/event1.jpg" alt="REPUBLIC DAY PARADE" />
@@ -96,13 +103,7 @@ const Events = () => {
           <div className="event-date">March 31, 2025</div>
         </div>
         
-        <div className="event" onClick={() => handleEventClick("INDEPENDENCE DAY")}>
-          <div className="event-image">
-            <img src="assets/event4.jpg" alt="INDEPENDENCE DAY" />
-          </div>
-          <h3>INDEPENDENCE DAY</h3>
-          <div className="event-date">August 15, 2025</div>
-        </div>
+        
       </div>
 
       {/* --- ADD "View All" Button --- */}
