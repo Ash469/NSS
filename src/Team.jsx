@@ -444,7 +444,7 @@ const Team = () => {
         <div id="joint-coordinator" className="mb-16 md:mb-20">
           <h3 className="text-2xl font-semibold text-blue-900 mb-8 text-center section-heading-style">Joint Student Coordinators</h3>
           {/* Using CSS grid from Team.css but within Tailwind container */}
-          <div className="joint-coordinators-grid max-w-2xl mx-auto">
+          <div className="joint-coordinators-grid max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6">
              {jointCoordinator.map((member, index) => (
               <div key={index} className="joint-coordinator-card bg-white rounded-lg shadow-md overflow-hidden text-center p-6">
                 <div className="joint-coordinator-image w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-200">
