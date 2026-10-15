@@ -159,18 +159,18 @@ export const activities = [
   },
   {
     id: 20,
-    title: 'Hand Wash Distribution',
-    description: 'Around 300+ hand wash were distributed in the Hand Wash Distribution Camp organized by NSS IIT Guwahati',
+    title: 'Old Age Home pre-bihu Visit ',
+    description: 'Pre-Bihu blessings from the wisest hearts at Helping Hand Old Age Home. Sometimes the best way to celebrate a new beginning is by honoring those who’ve seen so many.',
     category: 'Welfare',
-    date: '25 August 2024',
-    image: 'assets/events/hand_wash_distrubtion.jpg'
+    date: '12 April 2026',
+    image: 'assets/events/card1.jpeg'
   },
   {
     id: 21,
-    title: 'Pad Distribution',
-    description: 'Around 1000+ pads were distributed in the Pad Distribution Camp organized by NSS IIT Guwahati',
+    title: 'School visit ',
+    description: 'Successfully wrapped up our Creativity building activities at chowki Gate high school. It was on Collab with Finesse, we had a very fun time with childern',
     category: 'Welfare',
-    date: '25 August 2024',
-    image: 'assets/events/handwash_distributin2.jpg'
+    date: '12 April 2026',
+    image: 'assets/events/card2.jpeg'
   }
 ]
