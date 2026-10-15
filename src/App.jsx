@@ -17,6 +17,7 @@ const Team = React.lazy(() => import('./Team'));
 const ActivitiesPage = React.lazy(() => import('./pages/ActivitiesPage'));
 const EventsPage = React.lazy(() => import('./pages/EventsPage'));
 const VolunteerHours = React.lazy(() => import('./pages/VolunteerHours')); 
+const JoinTeamForm = React.lazy(() => import('./pages/JoinTeamForm'));
 
 // Loading component
 const PageLoader = () => (
@@ -49,6 +50,7 @@ const App = () => {
             <Route path="/activities" element={<ActivitiesPage />} />
             <Route path="/events" element={<EventsPage />} />
             <Route path="/hours" element={<VolunteerHours />} />
+            <Route path="/join-team" element={<JoinTeamForm />} />
           </Routes>
         </Suspense>
       </main>
