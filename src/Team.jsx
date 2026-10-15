@@ -75,7 +75,7 @@ const programCoordinator = [
     {
       unit: 'Unit 01 Nilachal',
       members: [
-        { name: 'Dr. Kalyan Raidongia', position: 'PO', image: 'assets/staff/unit1/1.png' },
+        { name: 'Dr. atanu bhuyan', position: 'PO', image: 'assets/staff/unit1/1a.png' },
         { name: 'Mrs. Pallabita Barooah Choudhury', position: 'APO', image: 'assets/staff/unit1/2.png' }
       ]
     },
@@ -89,15 +89,15 @@ const programCoordinator = [
     {
       unit: 'Unit 03 Sandhyachal',
       members: [
-        // { name: 'Dr. Nipjyoti Bharadwaj', position: 'PO', image: 'assets/staff/unit3/9.png' },
+         { name: 'Dr. Samudrajit Thapa', position: 'PO', image: 'assets/staff/unit3/9a.png' },
         { name: 'Mr. Manash Protim Dutta', position: 'APO', image: 'assets/staff/unit3/10.png' }
       ]
     },
     {
       unit: 'Unit 04 Bhasmachal',
       members: [
-        { name: 'Dr. Manish Bhatt', position: 'PO', image: 'assets/staff/unit4/12.png' },
-        { name: 'Mr. Kalyan Boro', position: 'APO', image: 'assets/staff/unit4/13.png' }
+        { name: 'Dr. Manish Bhatt', position: 'PO', image: 'assets/staff/unit4/13.png' },
+        { name: 'Mr. Ankuran deka', position: 'APO', image: 'assets/staff/unit4/12a.png' }
       ]
     },
     {
@@ -117,36 +117,36 @@ const programCoordinator = [
     {
       unit: 'Unit 07 Manikarneswar',
       members: [
-        { name: 'Dr. Sumit Kumar', position: 'PO', image: 'assets/staff/unit7/15.png' },
-        { name: 'Mr. Nabakumar Bhoi', position: 'APO', image: 'assets/staff/unit7/16.png' }
+        { name: 'Dr. Arif Warsi Laskar', position: 'PO', image: 'assets/staff/unit7/15a.png' },
+        { name: 'Mr. Bidyut Kumar', position: 'APO', image: 'assets/staff/unit7/16a.png' }
       ]
     },
     {
       unit: 'Unit 08 Garuachal',
       members: [
-        { name: 'Dr. Kuldeep Baishya', position: 'PO', image: 'assets/staff/unit8/16.png' },
-        { name: 'Mr. Himanku Dutta', position: 'APO', image: 'assets/staff/unit8/17.png' }
+        { name: 'Dr. Aariya Sen', position: 'PO', image: 'assets/staff/unit8/16a.png' },
+        { name: 'Mr. Gautam Barman', position: 'APO', image: 'assets/staff/unit8/17a.png' }
       ]
     },
     {
       unit: 'Unit 09 Drigheswari',
       members: [
-        { name: 'Dr. R. B. Sharmila', position: 'PO', image: 'assets/staff/unit9/17.png' },
-        { name: 'Ms. Nitimoyee Mahanta', position: 'APO', image: 'assets/staff/unit9/18.png' }
+        { name: 'Dr. Ritika Jain', position: 'PO', image: 'assets/staff/unit9/17a.png' },
+        { name: 'Ms. Harshita Medhi', position: 'APO', image: 'assets/staff/unit9/18a.png' }
       ]
     },
     {
       unit: 'Unit 10 Agiyathuri',
       members: [
-        { name: 'Dr. Romanbabu Oinam', position: 'PO', image: 'assets/staff/unit10/18.png' },
-        { name: 'Ms. Nandeeta Das Salhotra', position: 'APO', image: 'assets/staff/unit10/19.png' }
+        { name: 'Dr. Bhrigu Kumar Lahkar', position: 'PO', image: 'assets/staff/unit10/18a.png' },
+        { name: 'Ms. Deep Jyoti Baruah', position: 'APO', image: 'assets/staff/unit10/19a.png' }
       ]
     },
     {
       unit: 'Unit 11 Devottar',
       members: [
-        { name: 'Dr. Kaling Taki', position: 'PO', image: 'assets/staff/unit11/19.png' },
-        { name: 'Mr. Mintu Dutta', position: 'APO', image: 'assets/staff/unit11/20.png' }
+        { name: 'Dr. Bernard Nongpoh ', position: 'PO', image: 'assets/staff/unit11/19a.png' },
+        { name: 'Mr. Prashanta Kalita', position: 'APO', image: 'assets/staff/unit11/20a.png' }
       ]
     }
   ];
@@ -156,13 +156,13 @@ const programCoordinator = [
     { name: 'Mr. Deep Dodiya', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/deep.jpeg' },
     { name: 'Ms. Suhani', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/suhani.jpeg' },
     { name: 'Mr. Yash Kumar', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/yash kumar.jpeg' },
-    { name: 'Ms. Dharsana M S', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/default-profile.svg' },
+    { name: 'Ms. Dharsana M S', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/dharsana.jpeg' },
     { name: 'Mr. Nikhil Krushna Ghate', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/nikhil ghate.jpeg' },
-    { name: 'Mr. Rohit Sunny', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/default-profile.svg' },
+    { name: 'Mr. Rohit Sunny', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/rohitsunny.pdf' },
     { name: 'Mr. Rohit', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/Rohit.png' },
     { name: 'Mr. Harshit Kumar Mishra', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/11.PNG' },
     { name: 'Mr. Pallab Dutta', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/pallab dutta.jpeg' },
-    { name: 'Ms. Anshika Joshi', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/default-profile.svg' }
+    { name: 'Ms. Anshika Joshi', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/anshika.jpeg' }
   ];
   const previousJointCoordinators = [
     {
