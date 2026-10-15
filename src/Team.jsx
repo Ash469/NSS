@@ -246,14 +246,14 @@ const MobileSlideNav = ({ isOpen, onClose, activeSection, scrollToSection }) => 
     <>
         {/* Overlay */}
         <div
-            className={`fixed inset-0 bg-black bg-opacity-50 z-[990] transition-opacity duration-300 lg:hidden ${
+            className={`fixed inset-0 bg-black bg-opacity-50 z-990 transition-opacity duration-300 lg:hidden ${
                 isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
             }`}
             onClick={onClose}
         ></div>
         {/* Slide Panel */}
         <div
-            className={`fixed top-0 right-0 h-full w-64 bg-white shadow-xl z-[1000] transform transition-transform duration-300 ease-in-out lg:hidden ${
+            className={`fixed top-0 right-0 h-full w-64 bg-white shadow-xl z-1000 transform transition-transform duration-300 ease-in-out lg:hidden ${
                 isOpen ? 'translate-x-0' : 'translate-x-full'
             }`}
         >
@@ -294,7 +294,7 @@ const MobileSlideNav = ({ isOpen, onClose, activeSection, scrollToSection }) => 
 const MobileNavToggle = ({ onClick }) => (
     <button
         onClick={onClick}
-        className="fixed bottom-6 right-6 z-[995] lg:hidden bg-blue-600 text-white rounded-full p-3 shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+        className="fixed bottom-6 right-6 z-995 lg:hidden bg-blue-600 text-white rounded-full p-3 shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
         aria-label="Toggle team sections menu"
     >
         {/* Simple hamburger icon */}
@@ -306,6 +306,7 @@ const MobileNavToggle = ({ onClick }) => (
 const Team = () => {
   const [activeSection, setActiveSection] = useState('program-coordinator');
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false); // State for mobile nav
+  const navigate = useNavigate();
 
   // --- Scroll to specific section (Updated Offset) ---
   const scrollToSection = (sectionId) => {
@@ -466,7 +467,7 @@ const Team = () => {
                 <div className="unit-members-pair grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {unit.members.map((member, memberIndex) => (
                     <div key={memberIndex} className="unit-member-card flex items-center gap-3 p-3 bg-gray-50 rounded border">
-                      <div className="member-image-small w-16 h-16 rounded-full overflow-hidden flex-shrink-0 border-2 border-blue-200">
+                      <div className="member-image-small w-16 h-16 rounded-full overflow-hidden shrink-0 border-2 border-blue-200">
                         <img src={member.image} alt={member.name} loading="lazy" className="w-full h-full object-cover"/>
                       </div>
                       <div className="member-details">
@@ -530,6 +531,27 @@ const Team = () => {
             ))}
           </div>
         </div>
+
+        {/* Join Team CTA */}
+        <section className="mb-6">
+          <div className="max-w-4xl mx-auto bg-white border border-blue-100 shadow-md rounded-2xl p-6 md:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+            <div>
+              <h3 className="text-2xl font-semibold text-blue-900 mb-2">Are you willing to join our team?</h3>
+              <p className="text-gray-600 text-sm sm:text-base">
+                Fill out the form and connect with us on WhatsApp to become a part of NSS IIT Guwahati.
+              </p>
+            </div>
+            <div className="md:pl-6 md:border-l border-blue-100">
+              <button
+                type="button"
+                onClick={() => navigate('/join-team')}
+                className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-blue-700 text-white font-semibold hover:bg-blue-800 transition-colors duration-200 shadow-sm"
+              >
+                Open Join Form
+              </button>
+            </div>
+          </div>
+        </section>
         
       </div> 
     </div>
