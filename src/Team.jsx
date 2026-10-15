@@ -61,14 +61,14 @@ const programCoordinator = [
   ];
   const jointCoordinator = [
     {
-      name: 'Mr. Neelam Doin',
+      name: 'Mr. Dhruv Dengada',
       position: 'Joint Student Coordinator',
-      image: 'assets/staff/jsc.png'
+      image: 'assets/staff/dhruv-dengada.jpg'
     },
     {
-      name: 'Ms. Man Mayuri Deka',
+      name: 'Ms. Aditi Prabha',
       position: 'Joint Student Coordinator',
-      image: 'assets/staff/unit_cord/16.jpg'
+      image: 'assets/staff/aditi-prabha.jpeg'
     }
   ];
   const unitOfficers = [
@@ -151,22 +151,18 @@ const programCoordinator = [
     }
   ];
   const unitCoordinators = [
-    { name: 'Mr. Lav Kumar', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/1.png' },
-    { name: 'Mr. Harish Kumar', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/2.png' },
-    { name: 'Mr. Jasvinder Singh', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/3.png' },
-    { name: 'Ms. Shreha Kumari', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/4.png' },
-    { name: 'Ms. Pratibha Chaudhary', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/5.png' },
-    { name: 'Ms. Riya Ranjit Patil', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/6.png' },
-    { name: 'Mr. Mohit Nagraj', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/7.png' },
-    { name: 'Mr. Pallab Dutta', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/8.PNG' },
-    { name: 'Mr. Utkarsh Jaiswal', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/9.jpeg' },
-    { name: 'Ms. Pratibha Bairwa', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/10.jpg' },
-    { name: 'Mr. Harshit Mishra', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/11.PNG' },
-    { name: 'Mr. Surya', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/12.PNG' },
-    { name: 'Mr. Subhodeep Paul', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/13.PNG' },
-    { name: 'Mr. Neer Nayan Gogoi', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/14.jpg' },
-    { name: 'Ms. Aditi Prabha', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/15.jpg' },
-    { name: 'Ms. Matti D. Majaw', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/17.PNG' }
+    { name: 'Mr. Himanshu', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/Himanshu.jpeg' },
+    { name: 'Ms. Vaishnavi Pandey', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/vaishanvi.jpeg' },
+    { name: 'Mr. Deep Dodiya', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/deep.jpeg' },
+    { name: 'Ms. Suhani', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/suhani.jpeg' },
+    { name: 'Mr. Yash Kumar', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/yash kumar.jpeg' },
+    { name: 'Ms. Dharsana M S', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/default-profile.svg' },
+    { name: 'Mr. Nikhil Krushna Ghate', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/nikhil ghate.jpeg' },
+    { name: 'Mr. Rohit Sunny', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/default-profile.svg' },
+    { name: 'Mr. Rohit', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/Rohit.png' },
+    { name: 'Mr. Harshit Kumar Mishra', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/11.PNG' },
+    { name: 'Mr. Pallab Dutta', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/pallab dutta.jpeg' },
+    { name: 'Ms. Anshika Joshi', position: 'Unit Coordinator', image: 'assets/staff/unit_cord/default-profile.svg' }
   ];
   const previousJointCoordinators = [
     {
@@ -491,7 +487,7 @@ const Team = () => {
            {/* Using CSS grid from Team.css but within Tailwind container */}
            <div className="coordinators-container max-w-5xl mx-auto flex flex-col gap-6">
             {/* Split coordinators into chunks of 4 for rows */}
-            {[0, 4, 8, 12].map(startIndex => (
+            {Array.from({ length: Math.ceil(unitCoordinators.length / 4) }, (_, rowIndex) => rowIndex * 4).map(startIndex => (
                 <div key={startIndex} className="coordinators-row grid grid-cols-2 sm:grid-cols-4 gap-4">
                     {unitCoordinators.slice(startIndex, startIndex + 4).map((coordinator, index) => (
                         <div key={index} className="coordinator-card bg-white p-4 rounded-lg shadow text-center">
