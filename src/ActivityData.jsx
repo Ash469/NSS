@@ -1,4 +1,4 @@
-export const categories = ['All', 'Cleanliness', 'Donations', 'Teaching', 'Welfare', 'Awareness']
+export const categories = ['All', 'Cleanliness', 'Donations', 'Teaching', 'Welfare', 'Awareness', 'Camp']
 
 export const activities = [
   {
@@ -172,5 +172,45 @@ export const activities = [
     category: 'Welfare',
     date: '12 April 2026',
     image: 'assets/events/card2.jpeg'
-  }
+  },
+{
+    id: 22,
+    title: 'KV School SHS Pledge 2026',
+    description: 'NSS IIT Guwahati participated in the Swachhata Hi Seva pledge programme at Kendriya Vidyalaya IIT Guwahati.',
+    category: 'Awareness',
+    date: '',
+    image: 'assets/events/kv-school.jpg'
+  },
+  {
+    id: 23,
+    title: 'Candle March',
+    description: 'A candlelight march was held in remembrance of the soldiers who lost their lives in the Pulwama attack.',
+    category: 'Awareness',
+    date: '',
+    image: 'assets/events/candle-march.jpg'
+  },
+  {
+    id: 24,
+    title: 'Parijat Academy Visit cum Cloth Donation',
+    description: 'NSS volunteers visited Parijat Academy and participated in a clothes donation initiative.',
+    category: 'Donations',
+    date: '',
+    image: 'assets/events/parijat-donation.jpg'
+  },
+  {
+    id: 25,
+    title: 'Winter Camp',
+    description: 'NSS volunteers participated in the Winter Camp programme.',
+    category: 'Camp',
+    date: '',
+    image: 'assets/events/winter-camp.jpg'
+  },
+  {
+    id: 26,
+    title: 'Camp NCB IITG',
+    description: 'An NSS camp-related event at IIT Guwahati.',
+    category: 'Camp',
+    date: '',
+    image: 'assets/events/ncb-camp.jpg'
+  },
 ]
